@@ -5,6 +5,7 @@ public class Estudiante implements Comparable<Estudiante>{
 	private String apellido;
 	private int edad;
 	private int numeroLista;
+	private String test;
 	
 	//Cuando una clase no tiene constructor, por defecto tiene un
 	//constructor sin parametros
@@ -13,12 +14,23 @@ public class Estudiante implements Comparable<Estudiante>{
 	}
 	
 	public Estudiante (String nombre) {
-		
+		this.nombre = nombre;
 	}
 	
 	public Estudiante (String nombre, String apellido) {
-		
+		this.nombre = nombre;
+		this.apellido = apellido;
 	}
+	
+	public Estudiante (String nombre, String apellido, int edad, int numeroLista) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.edad = edad;
+		this.numeroLista = numeroLista;
+	}
+	
+	//se recomienda que los constructores no tengan una gran cantidad de elementos
+	//por que su constructor sera ilegible y no entendible
 	
 	public String getApellido() {
 		return apellido;
